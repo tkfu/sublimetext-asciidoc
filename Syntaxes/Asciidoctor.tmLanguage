@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<!--
- |	This file is auto-generated from Asciidoctor.YAML-tmLanguage, do not edit it by hand!
--->
 <dict>
 	<key>fileTypes</key>
 	<array>
@@ -957,14 +954,6 @@ Examples:
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>#superscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#subscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
 					<string>#characters</string>
 				</dict>
 			</array>
@@ -1035,14 +1024,6 @@ Examples:
 				<dict>
 					<key>include</key>
 					<string>#mark</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#superscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#subscript</string>
 				</dict>
 				<dict>
 					<key>include</key>
@@ -1182,14 +1163,6 @@ Examples:
 				<dict>
 					<key>include</key>
 					<string>#mark</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#superscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#subscript</string>
 				</dict>
 			</array>
 		</dict>
@@ -1532,14 +1505,6 @@ Examples:
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>#superscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#subscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
 					<string>#characters</string>
 				</dict>
 			</array>
@@ -1610,14 +1575,6 @@ Examples:
 				<dict>
 					<key>include</key>
 					<string>#monospaced</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#superscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#subscript</string>
 				</dict>
 				<dict>
 					<key>include</key>
@@ -1696,14 +1653,6 @@ Examples:
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>#superscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#subscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
 					<string>#characters</string>
 				</dict>
 			</array>
@@ -1774,14 +1723,6 @@ Examples:
 				<dict>
 					<key>include</key>
 					<string>#mark</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#superscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#subscript</string>
 				</dict>
 				<dict>
 					<key>include</key>
@@ -2025,14 +1966,6 @@ Examples:
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>#superscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#subscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
 					<string>#characters</string>
 				</dict>
 			</array>
@@ -2103,184 +2036,6 @@ Examples:
 				<dict>
 					<key>include</key>
 					<string>#mark</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#superscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#subscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#characters</string>
-				</dict>
-			</array>
-		</dict>
-		<key>subscript</key>
-		<dict>
-			<key>begin</key>
-			<string>(?x)
-(\[[^\]]*?\])?  # might start with attribute list
-(?&lt;!\\)         # must not be preceded by escape
-(~)</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>support.variable.attributelist.asciidoc</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.subscript.begin.asciidoc</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>Subscript text.
-
-Examples:
-  E=mc^2^
-  E=mc[red]^2^
-</string>
-			<key>contentName</key>
-			<string>meta.subscriptinner.asciidoc</string>
-			<key>end</key>
-			<string>~</string>
-			<key>endCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.subscript.end.asciidoc</string>
-				</dict>
-			</dict>
-			<key>name</key>
-			<string>string.other.subscript.asciidoc</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#strong_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#emphasis_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#monospaced_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#mark_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#strong</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#emphasis</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#monospaced</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#mark</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#superscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#characters</string>
-				</dict>
-			</array>
-		</dict>
-		<key>superscript</key>
-		<dict>
-			<key>begin</key>
-			<string>(?x)
-(\[[^\]]*?\])?  # might start with attribute list
-(?&lt;!\\)         # no preceding escape
-(\^)</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>support.variable.attributelist.asciidoc</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.superscript.begin.asciidoc</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>Superscript text.
-
-Examples:
-  H~2~O
-  H[red]~2~O
-</string>
-			<key>contentName</key>
-			<string>meta.superscriptinner.asciidoc</string>
-			<key>end</key>
-			<string>^</string>
-			<key>endCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.superscript.end.asciidoc</string>
-				</dict>
-			</dict>
-			<key>name</key>
-			<string>string.other.superscript.asciidoc</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#strong_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#emphasis_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#monospaced_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#mark_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#strong</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#emphasis</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#monospaced</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#mark</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#subscript</string>
 				</dict>
 				<dict>
 					<key>include</key>

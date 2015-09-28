@@ -427,8 +427,8 @@ repository:
     - include: '#emphasis'
     - include: '#monospaced'
     - include: '#mark'
-    - include: '#superscript'
-    - include: '#subscript'
+    # - include: '#superscript'
+    # - include: '#subscript'
 
   strong_double:
     comment: |
@@ -457,8 +457,8 @@ repository:
     - include: '#emphasis'
     - include: '#monospaced'
     - include: '#mark'
-    - include: '#superscript'
-    - include: '#subscript'
+    # - include: '#superscript'
+    # - include: '#subscript'
     - include: '#characters'
 
   emphasis_double:
@@ -488,8 +488,8 @@ repository:
     - include: '#strong'
     - include: '#monospaced'
     - include: '#mark'
-    - include: '#superscript'
-    - include: '#subscript'
+    # - include: '#superscript'
+    # - include: '#subscript'
     - include: '#characters'
 
   monospaced_double:
@@ -519,8 +519,8 @@ repository:
     - include: '#strong'
     - include: '#emphasis'
     - include: '#mark'
-    - include: '#superscript'
-    - include: '#subscript'
+    # - include: '#superscript'
+    # - include: '#subscript'
     - include: '#characters'
 
   mark_double:
@@ -550,8 +550,8 @@ repository:
     - include: '#strong'
     - include: '#emphasis'
     - include: '#monospaced'
-    - include: '#superscript'
-    - include: '#subscript'
+    # - include: '#superscript'
+    # - include: '#subscript'
     - include: '#characters'
 
   passthrough:
@@ -602,8 +602,8 @@ repository:
     - include: '#emphasis'
     - include: '#monospaced'
     - include: '#mark'
-    - include: '#superscript'
-    - include: '#subscript'
+    # - include: '#superscript'
+    # - include: '#subscript'
     - include: '#characters'
 
   emphasis:
@@ -636,8 +636,8 @@ repository:
     - include: '#strong'
     - include: '#monospaced'
     - include: '#mark'
-    - include: '#superscript'
-    - include: '#subscript'
+    # - include: '#superscript'
+    # - include: '#subscript'
     - include: '#characters'
 
   monospaced:
@@ -670,8 +670,8 @@ repository:
     - include: '#strong'
     - include: '#emphasis'
     - include: '#mark'
-    - include: '#superscript'
-    - include: '#subscript'
+    # - include: '#superscript'
+    # - include: '#subscript'
     - include: '#characters'
 
   mark:
@@ -704,73 +704,73 @@ repository:
     - include: '#strong'
     - include: '#emphasis'
     - include: '#monospaced'
-    - include: '#superscript'
-    - include: '#subscript'
+    # - include: '#superscript'
+    # - include: '#subscript'
     - include: '#characters'
 
-  subscript:
-    comment: |
-      Subscript text.
+  # subscript:
+  #   comment: |
+  #     Subscript text.
 
-      Examples:
-        E=mc^2^
-        E=mc[red]^2^
-    name: string.other.subscript.asciidoc
-    contentName: meta.subscriptinner.asciidoc
-    begin: |-
-      (?x)
-      (\[[^\]]*?\])?  # might start with attribute list
-      (?<!\\)         # must not be preceded by escape
-      (~)
-    beginCaptures:
-      '1': {name: support.variable.attributelist.asciidoc}
-      '2': {name: punctuation.definition.string.subscript.begin.asciidoc}
-    end: '~'
-    endCaptures:
-      '0': {name: punctuation.definition.string.subscript.end.asciidoc}
-    patterns:
-    - include: '#strong_double'
-    - include: '#emphasis_double'
-    - include: '#monospaced_double'
-    - include: '#mark_double'
-    - include: '#strong'
-    - include: '#emphasis'
-    - include: '#monospaced'
-    - include: '#mark'
-    - include: '#superscript'
-    - include: '#characters'
+  #     Examples:
+  #       E=mc^2^
+  #       E=mc[red]^2^
+  #   name: string.other.subscript.asciidoc
+  #   contentName: meta.subscriptinner.asciidoc
+  #   begin: |-
+  #     (?x)
+  #     (\[[^\]]*?\])?  # might start with attribute list
+  #     (?<!\\)         # must not be preceded by escape
+  #     (~)
+  #   beginCaptures:
+  #     '1': {name: support.variable.attributelist.asciidoc}
+  #     '2': {name: punctuation.definition.string.subscript.begin.asciidoc}
+  #   end: '~'
+  #   endCaptures:
+  #     '0': {name: punctuation.definition.string.subscript.end.asciidoc}
+  #   patterns:
+  #   - include: '#strong_double'
+  #   - include: '#emphasis_double'
+  #   - include: '#monospaced_double'
+  #   - include: '#mark_double'
+  #   - include: '#strong'
+  #   - include: '#emphasis'
+  #   - include: '#monospaced'
+  #   - include: '#mark'
+  #   # - include: '#superscript'
+  #   - include: '#characters'
 
-  superscript:
-    comment: |
-      Superscript text.
+  # superscript:
+  #   comment: |
+  #     Superscript text.
 
-      Examples:
-        H~2~O
-        H[red]~2~O
-    name: string.other.superscript.asciidoc
-    contentName: meta.superscriptinner.asciidoc
-    begin: |-
-      (?x)
-      (\[[^\]]*?\])?  # might start with attribute list
-      (?<!\\)         # no preceding escape
-      (\^)
-    beginCaptures:
-      '1': {name: support.variable.attributelist.asciidoc}
-      '2': {name: punctuation.definition.string.superscript.begin.asciidoc}
-    end: '^'
-    endCaptures:
-      '0': {name: punctuation.definition.string.superscript.end.asciidoc}
-    patterns:
-    - include: '#strong_double'
-    - include: '#emphasis_double'
-    - include: '#monospaced_double'
-    - include: '#mark_double'
-    - include: '#strong'
-    - include: '#emphasis'
-    - include: '#monospaced'
-    - include: '#mark'
-    - include: '#subscript'
-    - include: '#characters'
+  #     Examples:
+  #       H~2~O
+  #       H[red]~2~O
+  #   name: string.other.superscript.asciidoc
+  #   contentName: meta.superscriptinner.asciidoc
+  #   begin: |-
+  #     (?x)
+  #     (\[[^\]]*?\])?  # might start with attribute list
+  #     (?<!\\)         # no preceding escape
+  #     (\^)
+  #   beginCaptures:
+  #     '1': {name: support.variable.attributelist.asciidoc}
+  #     '2': {name: punctuation.definition.string.superscript.begin.asciidoc}
+  #   end: '^'
+  #   endCaptures:
+  #     '0': {name: punctuation.definition.string.superscript.end.asciidoc}
+  #   patterns:
+  #   - include: '#strong_double'
+  #   - include: '#emphasis_double'
+  #   - include: '#monospaced_double'
+  #   - include: '#mark_double'
+  #   - include: '#strong'
+  #   - include: '#emphasis'
+  #   - include: '#monospaced'
+  #   - include: '#mark'
+  #   - include: '#subscript'
+  #   - include: '#characters'
 
 
 #-----------------------------------------------------------------------------#
